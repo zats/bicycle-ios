@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class BCLStationAPIResponse;
+
+typedef void(^BCLAPIClientProtocolStationsCompletionHandler)(NSURLSessionDataTask *task, BCLStationAPIResponse *response, NSError *error);
+
 @protocol BCLAPIClientProtocol <NSObject>
 
-- (NSURLSessionDataTask *)allStations;
+- (NSURLSessionDataTask *)stationsWithCompeltionHandler:(BCLAPIClientProtocolStationsCompletionHandler)completionHandler;
 
 @end

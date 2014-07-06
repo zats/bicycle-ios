@@ -32,12 +32,6 @@ objection_requires_sel(@selector(monitoringService),
     [self _initializeDependencyInjection];
     [self _initializeServices];
     
-    [self.apiClient allStations];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.apiClient allStations];
-    });
-    
     return YES;
 }
 

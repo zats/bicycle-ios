@@ -40,13 +40,12 @@ objection_requires_sel(@selector(responseSerializer));
 
 #pragma mark - Public
 
-- (NSURLSessionDataTask *)allStations {
-    [self GET:@"/api/1/stations" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        
+- (NSURLSessionDataTask *)stationsWithCompeltionHandler:(BCLAPIClientProtocolStationsCompletionHandler)completionHandler {
+    return [self GET:@"/api/1/stations" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        completionHandler(task, responseObject, nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        
+        completionHandler(task, nil, error);
     }];
-    return nil;
 }
 
 #pragma mark - Private
