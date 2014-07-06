@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  BCLMapViewController.h
 //  Bicycle
 //
 //  Created by Sasha Zats on 7/5/14.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface BCLMapViewController : UIViewController
 
 @end
-

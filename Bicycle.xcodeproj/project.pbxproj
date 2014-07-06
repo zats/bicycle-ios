@@ -7,12 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21CABC6633224969870786FC /* libPods-Bicycle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91098A2162154254872C2712 /* libPods-Bicycle.a */; };
+		5C438A2819687DF300B73CFE /* BCLAPIResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C438A2719687DF300B73CFE /* BCLAPIResponseSerializer.m */; };
+		5C438A2C1968849300B73CFE /* BCLStationAPIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C438A2B1968849300B73CFE /* BCLStationAPIResponse.m */; };
+		5C438A30196886C600B73CFE /* BCLStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C438A2F196886C600B73CFE /* BCLStation.m */; };
+		5C438A3319691B6800B73CFE /* BCLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C438A3219691B6800B73CFE /* BCLModel.m */; };
+		5C438A38196920EA00B73CFE /* BCLAPIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C438A37196920EA00B73CFE /* BCLAPIResponse.m */; };
+		5C438A3B1969217300B73CFE /* BCLStationsAPIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C438A3A1969217300B73CFE /* BCLStationsAPIResponse.m */; };
+		5C438A4019695F3000B73CFE /* BCLModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C438A3F19695F3000B73CFE /* BCLModule.m */; };
+		5C438A4419695F8A00B73CFE /* Objection+BetterObjectiveC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C438A4319695F8A00B73CFE /* Objection+BetterObjectiveC.m */; };
+		5C438A461969702D00B73CFE /* ServiceRegions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C438A451969702D00B73CFE /* ServiceRegions.plist */; };
+		5C6DE3E719686ABD007EB5FD /* GMSCameraPosition+BetterXcodeIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6DE3E619686ABD007EB5FD /* GMSCameraPosition+BetterXcodeIntegration.m */; };
+		5C6DE3EE19687602007EB5FD /* BCLAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6DE3ED19687602007EB5FD /* BCLAPIClient.m */; };
+		5C6DE3F41968787B007EB5FD /* BCLDataMonitoringService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6DE3F31968787B007EB5FD /* BCLDataMonitoringService.m */; };
 		5C77757519685B5B00B0D1CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C77757419685B5B00B0D1CA /* main.m */; };
-		5C77757819685B5B00B0D1CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C77757719685B5B00B0D1CA /* AppDelegate.m */; };
-		5C77757B19685B5B00B0D1CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C77757A19685B5B00B0D1CA /* ViewController.m */; };
+		5C77757819685B5B00B0D1CA /* BCLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C77757719685B5B00B0D1CA /* BCLAppDelegate.m */; };
 		5C77757E19685B5B00B0D1CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C77757C19685B5B00B0D1CA /* Main.storyboard */; };
 		5C77758019685B5B00B0D1CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C77757F19685B5B00B0D1CA /* Images.xcassets */; };
 		5C77758C19685B5B00B0D1CA /* BicycleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C77758B19685B5B00B0D1CA /* BicycleTests.m */; };
+		5C9AEE371968616400A5B257 /* BCLMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9AEE361968616400A5B257 /* BCLMapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,18 +39,50 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C438A2619687DF300B73CFE /* BCLAPIResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLAPIResponseSerializer.h; sourceTree = "<group>"; };
+		5C438A2719687DF300B73CFE /* BCLAPIResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLAPIResponseSerializer.m; sourceTree = "<group>"; };
+		5C438A291968831000B73CFE /* BCLAPIResponseSerializerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCLAPIResponseSerializerProtocol.h; sourceTree = "<group>"; };
+		5C438A2A1968849300B73CFE /* BCLStationAPIResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLStationAPIResponse.h; sourceTree = "<group>"; };
+		5C438A2B1968849300B73CFE /* BCLStationAPIResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLStationAPIResponse.m; sourceTree = "<group>"; };
+		5C438A2E196886C600B73CFE /* BCLStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLStation.h; sourceTree = "<group>"; };
+		5C438A2F196886C600B73CFE /* BCLStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLStation.m; sourceTree = "<group>"; };
+		5C438A3119691B6800B73CFE /* BCLModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLModel.h; sourceTree = "<group>"; };
+		5C438A3219691B6800B73CFE /* BCLModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLModel.m; sourceTree = "<group>"; };
+		5C438A3419691B8400B73CFE /* BCLMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCLMacros.h; sourceTree = "<group>"; };
+		5C438A36196920EA00B73CFE /* BCLAPIResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLAPIResponse.h; sourceTree = "<group>"; };
+		5C438A37196920EA00B73CFE /* BCLAPIResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLAPIResponse.m; sourceTree = "<group>"; };
+		5C438A391969217300B73CFE /* BCLStationsAPIResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLStationsAPIResponse.h; sourceTree = "<group>"; };
+		5C438A3A1969217300B73CFE /* BCLStationsAPIResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLStationsAPIResponse.m; sourceTree = "<group>"; };
+		5C438A3C1969272000B73CFE /* BCLDataMonitoringTaskProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCLDataMonitoringTaskProtocol.h; sourceTree = "<group>"; };
+		5C438A3E19695F3000B73CFE /* BCLModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLModule.h; sourceTree = "<group>"; };
+		5C438A3F19695F3000B73CFE /* BCLModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLModule.m; sourceTree = "<group>"; };
+		5C438A4219695F8A00B73CFE /* Objection+BetterObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Objection+BetterObjectiveC.h"; path = "Objection+BetterObjectiveC/Objection+BetterObjectiveC.h"; sourceTree = "<group>"; };
+		5C438A4319695F8A00B73CFE /* Objection+BetterObjectiveC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Objection+BetterObjectiveC.m"; path = "Objection+BetterObjectiveC/Objection+BetterObjectiveC.m"; sourceTree = "<group>"; };
+		5C438A451969702D00B73CFE /* ServiceRegions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ServiceRegions.plist; sourceTree = "<group>"; };
+		5C6DE3E5196869DB007EB5FD /* GMSCameraPosition+BetterXcodeIntegration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GMSCameraPosition+BetterXcodeIntegration.h"; path = "GoogleMaps+BetterXcode/GMSCameraPosition+BetterXcodeIntegration.h"; sourceTree = "<group>"; };
+		5C6DE3E619686ABD007EB5FD /* GMSCameraPosition+BetterXcodeIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GMSCameraPosition+BetterXcodeIntegration.m"; path = "GoogleMaps+BetterXcode/GMSCameraPosition+BetterXcodeIntegration.m"; sourceTree = "<group>"; };
+		5C6DE3EC19687602007EB5FD /* BCLAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLAPIClient.h; sourceTree = "<group>"; };
+		5C6DE3ED19687602007EB5FD /* BCLAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLAPIClient.m; sourceTree = "<group>"; };
+		5C6DE3EF1968772E007EB5FD /* BCLAPIClientProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCLAPIClientProtocol.h; sourceTree = "<group>"; };
+		5C6DE3F21968787B007EB5FD /* BCLDataMonitoringService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLDataMonitoringService.h; sourceTree = "<group>"; };
+		5C6DE3F31968787B007EB5FD /* BCLDataMonitoringService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLDataMonitoringService.m; sourceTree = "<group>"; };
+		5C6DE3F51968788C007EB5FD /* BCLDataMonitoringServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCLDataMonitoringServiceProtocol.h; sourceTree = "<group>"; };
+		5C6EF66D1968673800077137 /* GMSMapView+BetterXcodeIntegration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GMSMapView+BetterXcodeIntegration.h"; path = "GoogleMaps+BetterXcode/GMSMapView+BetterXcodeIntegration.h"; sourceTree = "<group>"; };
+		5C6EF66E1968679600077137 /* GoogleMaps+BetterXcodeIntegration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GoogleMaps+BetterXcodeIntegration.h"; path = "GoogleMaps+BetterXcode/GoogleMaps+BetterXcodeIntegration.h"; sourceTree = "<group>"; };
 		5C77756F19685B5A00B0D1CA /* Bicycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bicycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C77757319685B5B00B0D1CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C77757419685B5B00B0D1CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5C77757619685B5B00B0D1CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5C77757719685B5B00B0D1CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5C77757919685B5B00B0D1CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5C77757A19685B5B00B0D1CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5C77757619685B5B00B0D1CA /* BCLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCLAppDelegate.h; sourceTree = "<group>"; };
+		5C77757719685B5B00B0D1CA /* BCLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCLAppDelegate.m; sourceTree = "<group>"; };
 		5C77757D19685B5B00B0D1CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C77757F19685B5B00B0D1CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5C77758519685B5B00B0D1CA /* BicycleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BicycleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C77758A19685B5B00B0D1CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C77758B19685B5B00B0D1CA /* BicycleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BicycleTests.m; sourceTree = "<group>"; };
+		5C9AEE351968616400A5B257 /* BCLMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLMapViewController.h; sourceTree = "<group>"; };
+		5C9AEE361968616400A5B257 /* BCLMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLMapViewController.m; sourceTree = "<group>"; };
+		91098A2162154254872C2712 /* libPods-Bicycle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bicycle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE25243DB6AF4A4F8C633093 /* Pods-Bicycle.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bicycle.xcconfig"; path = "Pods/Pods-Bicycle.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21CABC6633224969870786FC /* libPods-Bicycle.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +104,107 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		562636F566F2481B84C8679C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91098A2162154254872C2712 /* libPods-Bicycle.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C438A2D1968861A00B73CFE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C438A2E196886C600B73CFE /* BCLStation.h */,
+				5C438A2F196886C600B73CFE /* BCLStation.m */,
+				5C438A3119691B6800B73CFE /* BCLModel.h */,
+				5C438A3219691B6800B73CFE /* BCLModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5C438A35196920D300B73CFE /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				5C438A36196920EA00B73CFE /* BCLAPIResponse.h */,
+				5C438A37196920EA00B73CFE /* BCLAPIResponse.m */,
+				5C438A391969217300B73CFE /* BCLStationsAPIResponse.h */,
+				5C438A3A1969217300B73CFE /* BCLStationsAPIResponse.m */,
+			);
+			name = Response;
+			sourceTree = "<group>";
+		};
+		5C438A3D19695F1300B73CFE /* Dependency Injection */ = {
+			isa = PBXGroup;
+			children = (
+				5C438A3E19695F3000B73CFE /* BCLModule.h */,
+				5C438A3F19695F3000B73CFE /* BCLModule.m */,
+			);
+			name = "Dependency Injection";
+			sourceTree = "<group>";
+		};
+		5C438A4119695F6000B73CFE /* Objection+BetterObjectiveC */ = {
+			isa = PBXGroup;
+			children = (
+				5C438A4219695F8A00B73CFE /* Objection+BetterObjectiveC.h */,
+				5C438A4319695F8A00B73CFE /* Objection+BetterObjectiveC.m */,
+			);
+			name = "Objection+BetterObjectiveC";
+			sourceTree = "<group>";
+		};
+		5C6DE3EA19687547007EB5FD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5C6DE3F11968785F007EB5FD /* Monitoring Tasks */,
+				5C6DE3F019687859007EB5FD /* API */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		5C6DE3EB19687561007EB5FD /* Trash */ = {
+			isa = PBXGroup;
+			children = (
+				5C77757219685B5B00B0D1CA /* Supporting Files */,
+				5C77757019685B5A00B0D1CA /* Products */,
+				DE25243DB6AF4A4F8C633093 /* Pods-Bicycle.xcconfig */,
+				562636F566F2481B84C8679C /* Frameworks */,
+			);
+			name = Trash;
+			sourceTree = "<group>";
+		};
+		5C6DE3F019687859007EB5FD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5C438A35196920D300B73CFE /* Response */,
+				5C6DE3EC19687602007EB5FD /* BCLAPIClient.h */,
+				5C6DE3ED19687602007EB5FD /* BCLAPIClient.m */,
+				5C6DE3EF1968772E007EB5FD /* BCLAPIClientProtocol.h */,
+				5C438A2619687DF300B73CFE /* BCLAPIResponseSerializer.h */,
+				5C438A2719687DF300B73CFE /* BCLAPIResponseSerializer.m */,
+				5C438A291968831000B73CFE /* BCLAPIResponseSerializerProtocol.h */,
+				5C438A2A1968849300B73CFE /* BCLStationAPIResponse.h */,
+				5C438A2B1968849300B73CFE /* BCLStationAPIResponse.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		5C6DE3F11968785F007EB5FD /* Monitoring Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				5C6DE3F51968788C007EB5FD /* BCLDataMonitoringServiceProtocol.h */,
+				5C6DE3F21968787B007EB5FD /* BCLDataMonitoringService.h */,
+				5C6DE3F31968787B007EB5FD /* BCLDataMonitoringService.m */,
+				5C438A3C1969272000B73CFE /* BCLDataMonitoringTaskProtocol.h */,
+			);
+			name = "Monitoring Tasks";
+			sourceTree = "<group>";
+		};
 		5C77756619685B5A00B0D1CA = {
 			isa = PBXGroup;
 			children = (
 				5C77757119685B5A00B0D1CA /* Bicycle */,
-				5C77758819685B5B00B0D1CA /* BicycleTests */,
-				5C77757019685B5A00B0D1CA /* Products */,
+				5C77758819685B5B00B0D1CA /* Tests */,
+				5C6DE3EB19687561007EB5FD /* Trash */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +220,12 @@
 		5C77757119685B5A00B0D1CA /* Bicycle */ = {
 			isa = PBXGroup;
 			children = (
-				5C77757619685B5B00B0D1CA /* AppDelegate.h */,
-				5C77757719685B5B00B0D1CA /* AppDelegate.m */,
-				5C77757919685B5B00B0D1CA /* ViewController.h */,
-				5C77757A19685B5B00B0D1CA /* ViewController.m */,
-				5C77757C19685B5B00B0D1CA /* Main.storyboard */,
-				5C77757F19685B5B00B0D1CA /* Images.xcassets */,
-				5C77757219685B5B00B0D1CA /* Supporting Files */,
+				5C438A2D1968861A00B73CFE /* Model */,
+				5C6DE3EA19687547007EB5FD /* Services */,
+				5C9AEE3C1968668500A5B257 /* Utlities */,
+				5C9AEE3B1968667900A5B257 /* App */,
+				5C9AEE381968665E00A5B257 /* View Controllers */,
+				5C9AEE3A1968666C00A5B257 /* Resources */,
 			);
 			path = Bicycle;
 			sourceTree = "<group>";
@@ -97,14 +237,16 @@
 				5C77757419685B5B00B0D1CA /* main.m */,
 			);
 			name = "Supporting Files";
+			path = Bicycle;
 			sourceTree = "<group>";
 		};
-		5C77758819685B5B00B0D1CA /* BicycleTests */ = {
+		5C77758819685B5B00B0D1CA /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				5C77758B19685B5B00B0D1CA /* BicycleTests.m */,
 				5C77758919685B5B00B0D1CA /* Supporting Files */,
 			);
+			name = Tests;
 			path = BicycleTests;
 			sourceTree = "<group>";
 		};
@@ -116,6 +258,64 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5C9AEE381968665E00A5B257 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C9AEE391968666400A5B257 /* Map */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5C9AEE391968666400A5B257 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				5C9AEE351968616400A5B257 /* BCLMapViewController.h */,
+				5C9AEE361968616400A5B257 /* BCLMapViewController.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		5C9AEE3A1968666C00A5B257 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5C77757C19685B5B00B0D1CA /* Main.storyboard */,
+				5C77757F19685B5B00B0D1CA /* Images.xcassets */,
+				5C438A451969702D00B73CFE /* ServiceRegions.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5C9AEE3B1968667900A5B257 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5C438A3D19695F1300B73CFE /* Dependency Injection */,
+				5C77757619685B5B00B0D1CA /* BCLAppDelegate.h */,
+				5C77757719685B5B00B0D1CA /* BCLAppDelegate.m */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		5C9AEE3C1968668500A5B257 /* Utlities */ = {
+			isa = PBXGroup;
+			children = (
+				5C438A4119695F6000B73CFE /* Objection+BetterObjectiveC */,
+				5C9AEE3F196867C700A5B257 /* GoogleMaps+BetterXcodeIntegration */,
+				5C438A3419691B8400B73CFE /* BCLMacros.h */,
+			);
+			name = Utlities;
+			sourceTree = "<group>";
+		};
+		5C9AEE3F196867C700A5B257 /* GoogleMaps+BetterXcodeIntegration */ = {
+			isa = PBXGroup;
+			children = (
+				5C6DE3E5196869DB007EB5FD /* GMSCameraPosition+BetterXcodeIntegration.h */,
+				5C6DE3E619686ABD007EB5FD /* GMSCameraPosition+BetterXcodeIntegration.m */,
+				5C6EF66D1968673800077137 /* GMSMapView+BetterXcodeIntegration.h */,
+				5C6EF66E1968679600077137 /* GoogleMaps+BetterXcodeIntegration.h */,
+			);
+			name = "GoogleMaps+BetterXcodeIntegration";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,9 +323,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C77758F19685B5B00B0D1CA /* Build configuration list for PBXNativeTarget "Bicycle" */;
 			buildPhases = (
+				8431EAFCFCCF437E88CFDF51 /* Check Pods Manifest.lock */,
 				5C77756B19685B5A00B0D1CA /* Sources */,
 				5C77756C19685B5A00B0D1CA /* Frameworks */,
 				5C77756D19685B5A00B0D1CA /* Resources */,
+				81295E9CC45A4ECEA926FC7A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,6 +362,7 @@
 		5C77756719685B5A00B0D1CA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BCL;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Sash Zats";
 				TargetAttributes = {
@@ -198,6 +401,7 @@
 			files = (
 				5C77757E19685B5B00B0D1CA /* Main.storyboard in Resources */,
 				5C77758019685B5B00B0D1CA /* Images.xcassets in Resources */,
+				5C438A461969702D00B73CFE /* ServiceRegions.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,14 +414,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		81295E9CC45A4ECEA926FC7A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Bicycle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8431EAFCFCCF437E88CFDF51 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5C77756B19685B5A00B0D1CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C77757B19685B5B00B0D1CA /* ViewController.m in Sources */,
-				5C77757819685B5B00B0D1CA /* AppDelegate.m in Sources */,
+				5C438A38196920EA00B73CFE /* BCLAPIResponse.m in Sources */,
+				5C77757819685B5B00B0D1CA /* BCLAppDelegate.m in Sources */,
 				5C77757519685B5B00B0D1CA /* main.m in Sources */,
+				5C6DE3E719686ABD007EB5FD /* GMSCameraPosition+BetterXcodeIntegration.m in Sources */,
+				5C6DE3F41968787B007EB5FD /* BCLDataMonitoringService.m in Sources */,
+				5C6DE3EE19687602007EB5FD /* BCLAPIClient.m in Sources */,
+				5C438A4019695F3000B73CFE /* BCLModule.m in Sources */,
+				5C438A3B1969217300B73CFE /* BCLStationsAPIResponse.m in Sources */,
+				5C438A3319691B6800B73CFE /* BCLModel.m in Sources */,
+				5C438A4419695F8A00B73CFE /* Objection+BetterObjectiveC.m in Sources */,
+				5C438A30196886C600B73CFE /* BCLStation.m in Sources */,
+				5C438A2819687DF300B73CFE /* BCLAPIResponseSerializer.m in Sources */,
+				5C438A2C1968849300B73CFE /* BCLStationAPIResponse.m in Sources */,
+				5C9AEE371968616400A5B257 /* BCLMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +577,7 @@
 		};
 		5C77759019685B5B00B0D1CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE25243DB6AF4A4F8C633093 /* Pods-Bicycle.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -340,6 +589,7 @@
 		};
 		5C77759119685B5B00B0D1CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE25243DB6AF4A4F8C633093 /* Pods-Bicycle.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -404,6 +654,7 @@
 				5C77759119685B5B00B0D1CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C77759219685B5B00B0D1CA /* Build configuration list for PBXNativeTarget "BicycleTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +663,7 @@
 				5C77759419685B5B00B0D1CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

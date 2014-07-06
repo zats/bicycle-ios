@@ -6,18 +6,34 @@
 //  Copyright (c) 2014 Sash Zats. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "BCLAppDelegate.h"
 
-@interface AppDelegate ()
-            
+#import "BCLAPIClientProtocol.h"
+#import "BCLDataMonitoringServiceProtocol.h"
+#import "BCLModule.h"
 
+#import "Objection+BetterObjectiveC.h"
+#import <GoogleMaps/GoogleMaps.h>
+
+
+@interface BCLAppDelegate ()
+@property (nonatomic) id<BCLDataMonitoringServiceProtocol> monitoringService;
+@property (nonatomic) id<BCLAPIClientProtocol> apiClient;
 @end
 
-@implementation AppDelegate
-            
+@implementation BCLAppDelegate
+
+objection_requires_sel(@selector(monitoringService),
+                       @selector(apiClient));
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [self _initializeAPIKeys];
+    [self _initializeDependencyInjection];
+    [self _initializeServices];
+    
+    [self.apiClient allStations];
+    
     return YES;
 }
 
@@ -41,6 +57,22 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Private
+
+- (void)_initializeServices {
+}
+
+- (void)_initializeDependencyInjection {
+    JSObjectionModule *module = [[BCLModule alloc] init];
+    JSObjectionInjector *defaultInjection = [JSObjection createInjectorWithModule:module];
+    [JSObjection setDefaultInjector:defaultInjection];
+    [[JSObjection defaultInjector] injectDependencies:self];
+}
+
+- (void)_initializeAPIKeys {
+    [GMSServices provideAPIKey:@"AIzaSyDO0fejaIgM6opnYL-i7w3InJxnG87v0LQ"];
 }
 
 @end
