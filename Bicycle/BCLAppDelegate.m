@@ -9,7 +9,6 @@
 #import "BCLAppDelegate.h"
 
 #import "BCLAPIClientProtocol.h"
-#import "BCLDataMonitoringServiceProtocol.h"
 #import "BCLModule.h"
 
 #import "Objection+BetterObjectiveC.h"
@@ -17,7 +16,6 @@
 
 
 @interface BCLAppDelegate ()
-@property (nonatomic) id<BCLDataMonitoringServiceProtocol> monitoringService;
 @property (nonatomic) id<BCLAPIClientProtocol> apiClient;
 @end
 

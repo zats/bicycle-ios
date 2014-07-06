@@ -10,7 +10,6 @@
 
 #import "BCLAPIClient.h"
 #import "BCLAPIResponseSerializer.h"
-#import "BCLDataMonitoringService.h"
 
 @implementation BCLModule
 
@@ -25,9 +24,6 @@
     
     [self bindClass:[BCLAPIResponseSerializer class]
          toProtocol:@protocol(BCLAPIResponseSerializerProtocol)];
-    
-    [self bindClass:[BCLDataMonitoringService class]
-         toProtocol:@protocol(BCLDataMonitoringServiceProtocol)];
 }
 
 @end
