@@ -12,8 +12,9 @@
 #import "Objection+BetterObjectiveC.h"
 #import "BCLAPIClientProtocol.h"
 #import <AFNetworking/AFNetworking.h>
+#import "BCLStationAPIResponse.h"
 
-static const NSTimeInterval BCLStationMoitoringInterval = 1.5 * 60;
+static const NSTimeInterval BCLStationMoitoringInterval = 20;//1.5 * 60;
 
 static inline BOOL BCLReachabiltyStatusToBoolean(AFNetworkReachabilityStatus status) {
     return status == AFNetworkReachabilityStatusReachableViaWWAN || status == AFNetworkReachabilityStatusReachableViaWiFi;
@@ -36,18 +37,14 @@ objection_requires_sel(@selector(apiClient))
     [self _registerForForegroundNotification];
     [self _registerForNetworkRestoredNotification];
     
-    self.nextExecutionTimer = [NSTimer scheduledTimerWithTimeInterval:BCLStationMoitoringInterval
-                                                               target:self
-                                                             selector:@selector(_timerHandler)
-                                                             userInfo:nil
-                                                              repeats:YES];
-    [self _performTaskIfNeeded];
+    [self _scheduleNextTask];
 }
 
 - (void)stopMonitoring {
     [self _unregisterForForegroundNotification];
     [self _unregisterForBackgroundNotification];
     [self _unregisterForNetworkRestoredNotification];
+    [self _unscheduleNextTask];
 }
 
 - (void)dealloc {
@@ -57,11 +54,12 @@ objection_requires_sel(@selector(apiClient))
 #pragma mark - Actions
 
 - (void)_backgroundNotificationHandler {
-    [self stopMonitoring];
+    [self _unscheduleNextTask];
 }
 
 - (void)_foregroundNotificationHandler {
     [self startMonitoring];
+    [self _scheduleNextTask];
 }
 
 - (void)_rachabilityNotificationHandler:(NSNotification *)notification {
@@ -81,14 +79,33 @@ objection_requires_sel(@selector(apiClient))
 
 - (void)_performTaskIfNeeded {
     NSTimeInterval lastInterval = [[NSDate date] timeIntervalSinceDate:self.lastExecutionTime];
-    if (lastInterval >= BCLStationMoitoringInterval) {
+    if (!self.lastExecutionTime || lastInterval >= BCLStationMoitoringInterval) {
         [self _performTask];
     }
 }
 
 - (void)_performTask {
-    self.lastExecutionTime = [NSDate date];
-    [self.apiClient allStations];
+    @weakify(self);
+    [self.apiClient stationsWithCompeltionHandler:^(NSURLSessionDataTask *task, BCLStationAPIResponse *response, NSError *error) {
+        @strongify(self);
+        self.lastExecutionTime = [NSDate date];
+        self.stations = response.stations;
+        [self _scheduleNextTask];
+        NSLog(@"Finishined task with %@ stations", @([self.stations count]));
+    }];
+}
+
+- (void)_scheduleNextTask {
+    self.nextExecutionTimer = [NSTimer scheduledTimerWithTimeInterval:BCLStationMoitoringInterval
+                                                               target:self
+                                                             selector:@selector(_timerHandler)
+                                                             userInfo:nil
+                                                              repeats:NO];
+    [self _timerHandler];
+}
+
+- (void)_unscheduleNextTask {
+    [self.nextExecutionTimer invalidate];
 }
 
 - (void)_registerForBackgroundNotification {

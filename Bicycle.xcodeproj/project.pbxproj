@@ -72,7 +72,6 @@
 		5C7546FC1969825200290D94 /* Mantle+Reusability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Mantle+Reusability.m"; path = "Mantle+Reusability/Mantle+Reusability.m"; sourceTree = "<group>"; };
 		5C7546FF1969913600290D94 /* BCLStationsMonitoringService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLStationsMonitoringService.h; sourceTree = "<group>"; };
 		5C7547001969913600290D94 /* BCLStationsMonitoringService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLStationsMonitoringService.m; sourceTree = "<group>"; };
-		5C75470219699B7B00290D94 /* BCLStationsMonitoringServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCLStationsMonitoringServiceProtocol.h; sourceTree = "<group>"; };
 		5C77756F19685B5A00B0D1CA /* Bicycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bicycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C77757319685B5B00B0D1CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C77757419685B5B00B0D1CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -198,7 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				5C7546FF1969913600290D94 /* BCLStationsMonitoringService.h */,
-				5C75470219699B7B00290D94 /* BCLStationsMonitoringServiceProtocol.h */,
 				5C7547001969913600290D94 /* BCLStationsMonitoringService.m */,
 			);
 			name = "Monitoring Tasks";

@@ -23,9 +23,7 @@
         return apiClient;
     }];
     
-    [self bindProtocol:@protocol(BCLStationsMonitoringServiceProtocol) inScope:JSObjectionScopeSingleton usingBlock:^id(JSObjectionInjector *injection) {
-        return [[BCLStationsMonitoringService alloc] init];
-    }];
+    [self bindClass:[BCLStationsMonitoringService class] inScope:JSObjectionScopeSingleton];
     
     [self bindClass:[BCLAPIResponseSerializer class]
          toProtocol:@protocol(BCLAPIResponseSerializerProtocol)];

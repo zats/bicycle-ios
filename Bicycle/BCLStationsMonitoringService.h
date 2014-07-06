@@ -6,9 +6,14 @@
 //  Copyright (c) 2014 Sash Zats. All rights reserved.
 //
 
-#import "BCLStationsMonitoringServiceProtocol.h"
+#import <Foundation/Foundation.h>
 
-@interface BCLStationsMonitoringService : NSObject <BCLStationsMonitoringServiceProtocol>
+@interface BCLStationsMonitoringService : NSObject
 
+@property (nonatomic, copy, readonly) NSArray *stations;
+
+- (void)startMonitoring;
+
+- (void)stopMonitoring;
 
 @end

@@ -9,7 +9,7 @@
 #import "BCLAppDelegate.h"
 
 #import "BCLAPIClientProtocol.h"
-#import "BCLStationsMonitoringServiceProtocol.h"
+#import "BCLStationsMonitoringService.h"
 #import "BCLModule.h"
 
 #import "Objection+BetterObjectiveC.h"
@@ -17,7 +17,7 @@
 #import <Crashlytics/Crashlytics.h>
 
 @interface BCLAppDelegate ()
-@property (nonatomic) id<BCLStationsMonitoringServiceProtocol> monitoringService;
+@property (nonatomic) BCLStationsMonitoringService *monitoringService;
 @property (nonatomic) id<BCLAPIClientProtocol> apiClient;
 @end
 
