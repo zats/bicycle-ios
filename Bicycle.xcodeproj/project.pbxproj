@@ -19,7 +19,9 @@
 		5C438A461969702D00B73CFE /* ServiceRegions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C438A451969702D00B73CFE /* ServiceRegions.plist */; };
 		5C6DE3E719686ABD007EB5FD /* GMSCameraPosition+BetterXcodeIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6DE3E619686ABD007EB5FD /* GMSCameraPosition+BetterXcodeIntegration.m */; };
 		5C6DE3EE19687602007EB5FD /* BCLAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6DE3ED19687602007EB5FD /* BCLAPIClient.m */; };
-		5C6DE3F41968787B007EB5FD /* BCLDataMonitoringService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6DE3F31968787B007EB5FD /* BCLDataMonitoringService.m */; };
+		5C7546F9196981C200290D94 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7546F8196981C200290D94 /* Crashlytics.framework */; };
+		5C7546FD1969825200290D94 /* Mantle+Reusability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7546FC1969825200290D94 /* Mantle+Reusability.m */; };
+		5C7547011969913600290D94 /* BCLStationsMonitoringService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7547001969913600290D94 /* BCLStationsMonitoringService.m */; };
 		5C77757519685B5B00B0D1CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C77757419685B5B00B0D1CA /* main.m */; };
 		5C77757819685B5B00B0D1CA /* BCLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C77757719685B5B00B0D1CA /* BCLAppDelegate.m */; };
 		5C77757E19685B5B00B0D1CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C77757C19685B5B00B0D1CA /* Main.storyboard */; };
@@ -53,7 +55,6 @@
 		5C438A37196920EA00B73CFE /* BCLAPIResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLAPIResponse.m; sourceTree = "<group>"; };
 		5C438A391969217300B73CFE /* BCLStationsAPIResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLStationsAPIResponse.h; sourceTree = "<group>"; };
 		5C438A3A1969217300B73CFE /* BCLStationsAPIResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLStationsAPIResponse.m; sourceTree = "<group>"; };
-		5C438A3C1969272000B73CFE /* BCLDataMonitoringTaskProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCLDataMonitoringTaskProtocol.h; sourceTree = "<group>"; };
 		5C438A3E19695F3000B73CFE /* BCLModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLModule.h; sourceTree = "<group>"; };
 		5C438A3F19695F3000B73CFE /* BCLModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLModule.m; sourceTree = "<group>"; };
 		5C438A4219695F8A00B73CFE /* Objection+BetterObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Objection+BetterObjectiveC.h"; path = "Objection+BetterObjectiveC/Objection+BetterObjectiveC.h"; sourceTree = "<group>"; };
@@ -64,11 +65,14 @@
 		5C6DE3EC19687602007EB5FD /* BCLAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLAPIClient.h; sourceTree = "<group>"; };
 		5C6DE3ED19687602007EB5FD /* BCLAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLAPIClient.m; sourceTree = "<group>"; };
 		5C6DE3EF1968772E007EB5FD /* BCLAPIClientProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCLAPIClientProtocol.h; sourceTree = "<group>"; };
-		5C6DE3F21968787B007EB5FD /* BCLDataMonitoringService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLDataMonitoringService.h; sourceTree = "<group>"; };
-		5C6DE3F31968787B007EB5FD /* BCLDataMonitoringService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLDataMonitoringService.m; sourceTree = "<group>"; };
-		5C6DE3F51968788C007EB5FD /* BCLDataMonitoringServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCLDataMonitoringServiceProtocol.h; sourceTree = "<group>"; };
 		5C6EF66D1968673800077137 /* GMSMapView+BetterXcodeIntegration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GMSMapView+BetterXcodeIntegration.h"; path = "GoogleMaps+BetterXcode/GMSMapView+BetterXcodeIntegration.h"; sourceTree = "<group>"; };
 		5C6EF66E1968679600077137 /* GoogleMaps+BetterXcodeIntegration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GoogleMaps+BetterXcodeIntegration.h"; path = "GoogleMaps+BetterXcode/GoogleMaps+BetterXcodeIntegration.h"; sourceTree = "<group>"; };
+		5C7546F8196981C200290D94 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		5C7546FB1969825200290D94 /* Mantle+Reusability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Mantle+Reusability.h"; path = "Mantle+Reusability/Mantle+Reusability.h"; sourceTree = "<group>"; };
+		5C7546FC1969825200290D94 /* Mantle+Reusability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Mantle+Reusability.m"; path = "Mantle+Reusability/Mantle+Reusability.m"; sourceTree = "<group>"; };
+		5C7546FF1969913600290D94 /* BCLStationsMonitoringService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLStationsMonitoringService.h; sourceTree = "<group>"; };
+		5C7547001969913600290D94 /* BCLStationsMonitoringService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLStationsMonitoringService.m; sourceTree = "<group>"; };
+		5C75470219699B7B00290D94 /* BCLStationsMonitoringServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCLStationsMonitoringServiceProtocol.h; sourceTree = "<group>"; };
 		5C77756F19685B5A00B0D1CA /* Bicycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bicycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C77757319685B5B00B0D1CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C77757419685B5B00B0D1CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7546F9196981C200290D94 /* Crashlytics.framework in Frameworks */,
 				21CABC6633224969870786FC /* libPods-Bicycle.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +112,7 @@
 		562636F566F2481B84C8679C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5C7546F8196981C200290D94 /* Crashlytics.framework */,
 				91098A2162154254872C2712 /* libPods-Bicycle.a */,
 			);
 			name = Frameworks;
@@ -191,12 +197,27 @@
 		5C6DE3F11968785F007EB5FD /* Monitoring Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				5C6DE3F51968788C007EB5FD /* BCLDataMonitoringServiceProtocol.h */,
-				5C6DE3F21968787B007EB5FD /* BCLDataMonitoringService.h */,
-				5C6DE3F31968787B007EB5FD /* BCLDataMonitoringService.m */,
-				5C438A3C1969272000B73CFE /* BCLDataMonitoringTaskProtocol.h */,
+				5C7546FF1969913600290D94 /* BCLStationsMonitoringService.h */,
+				5C75470219699B7B00290D94 /* BCLStationsMonitoringServiceProtocol.h */,
+				5C7547001969913600290D94 /* BCLStationsMonitoringService.m */,
 			);
 			name = "Monitoring Tasks";
+			sourceTree = "<group>";
+		};
+		5C7546FA1969822800290D94 /* Mantle+Reusability */ = {
+			isa = PBXGroup;
+			children = (
+				5C7546FB1969825200290D94 /* Mantle+Reusability.h */,
+				5C7546FC1969825200290D94 /* Mantle+Reusability.m */,
+			);
+			name = "Mantle+Reusability";
+			sourceTree = "<group>";
+		};
+		5C7546FE196990B800290D94 /* Data Provides */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Data Provides";
 			sourceTree = "<group>";
 		};
 		5C77756619685B5A00B0D1CA = {
@@ -269,6 +290,7 @@
 		5C9AEE391968666400A5B257 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				5C7546FE196990B800290D94 /* Data Provides */,
 				5C9AEE351968616400A5B257 /* BCLMapViewController.h */,
 				5C9AEE361968616400A5B257 /* BCLMapViewController.m */,
 			);
@@ -298,6 +320,7 @@
 		5C9AEE3C1968668500A5B257 /* Utlities */ = {
 			isa = PBXGroup;
 			children = (
+				5C7546FA1969822800290D94 /* Mantle+Reusability */,
 				5C438A4119695F6000B73CFE /* Objection+BetterObjectiveC */,
 				5C9AEE3F196867C700A5B257 /* GoogleMaps+BetterXcodeIntegration */,
 				5C438A3419691B8400B73CFE /* BCLMacros.h */,
@@ -328,6 +351,7 @@
 				5C77756C19685B5A00B0D1CA /* Frameworks */,
 				5C77756D19685B5A00B0D1CA /* Resources */,
 				81295E9CC45A4ECEA926FC7A /* Copy Pods Resources */,
+				5C7546F71969817500290D94 /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -415,6 +439,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5C7546F71969817500290D94 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Crashlytics;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 1806f0e415eca8782897d8254a1363122c77c03a 2b5acc049504c1077095f7bd52b60173f9130607ded96d551c1c56e40ba0205f";
+		};
 		81295E9CC45A4ECEA926FC7A /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -452,11 +490,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7546FD1969825200290D94 /* Mantle+Reusability.m in Sources */,
 				5C438A38196920EA00B73CFE /* BCLAPIResponse.m in Sources */,
 				5C77757819685B5B00B0D1CA /* BCLAppDelegate.m in Sources */,
 				5C77757519685B5B00B0D1CA /* main.m in Sources */,
 				5C6DE3E719686ABD007EB5FD /* GMSCameraPosition+BetterXcodeIntegration.m in Sources */,
-				5C6DE3F41968787B007EB5FD /* BCLDataMonitoringService.m in Sources */,
+				5C7547011969913600290D94 /* BCLStationsMonitoringService.m in Sources */,
 				5C6DE3EE19687602007EB5FD /* BCLAPIClient.m in Sources */,
 				5C438A4019695F3000B73CFE /* BCLModule.m in Sources */,
 				5C438A3B1969217300B73CFE /* BCLStationsAPIResponse.m in Sources */,
@@ -581,6 +620,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Bicycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -593,6 +636,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Bicycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

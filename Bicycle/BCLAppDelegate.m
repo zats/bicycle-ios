@@ -9,13 +9,15 @@
 #import "BCLAppDelegate.h"
 
 #import "BCLAPIClientProtocol.h"
+#import "BCLStationsMonitoringServiceProtocol.h"
 #import "BCLModule.h"
 
 #import "Objection+BetterObjectiveC.h"
 #import <GoogleMaps/GoogleMaps.h>
-
+#import <Crashlytics/Crashlytics.h>
 
 @interface BCLAppDelegate ()
+@property (nonatomic) id<BCLStationsMonitoringServiceProtocol> monitoringService;
 @property (nonatomic) id<BCLAPIClientProtocol> apiClient;
 @end
 
@@ -31,6 +33,10 @@ objection_requires_sel(@selector(monitoringService),
     [self _initializeServices];
     
     [self.apiClient allStations];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.apiClient allStations];
+    });
     
     return YES;
 }
@@ -60,6 +66,7 @@ objection_requires_sel(@selector(monitoringService),
 #pragma mark - Private
 
 - (void)_initializeServices {
+    [self.monitoringService startMonitoring];
 }
 
 - (void)_initializeDependencyInjection {
@@ -71,6 +78,7 @@ objection_requires_sel(@selector(monitoringService),
 
 - (void)_initializeAPIKeys {
     [GMSServices provideAPIKey:@"AIzaSyDO0fejaIgM6opnYL-i7w3InJxnG87v0LQ"];
+    [Crashlytics startWithAPIKey:@"1806f0e415eca8782897d8254a1363122c77c03a"];
 }
 
 @end

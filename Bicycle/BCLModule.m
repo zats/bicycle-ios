@@ -10,6 +10,7 @@
 
 #import "BCLAPIClient.h"
 #import "BCLAPIResponseSerializer.h"
+#import "BCLStationsMonitoringService.h"
 
 @implementation BCLModule
 
@@ -20,6 +21,10 @@
         BCLAPIClient *apiClient = [[BCLAPIClient alloc] initWithBaseURL:URL
                                                    sessionConfiguration:configuraiton];
         return apiClient;
+    }];
+    
+    [self bindProtocol:@protocol(BCLStationsMonitoringServiceProtocol) inScope:JSObjectionScopeSingleton usingBlock:^id(JSObjectionInjector *injection) {
+        return [[BCLStationsMonitoringService alloc] init];
     }];
     
     [self bindClass:[BCLAPIResponseSerializer class]

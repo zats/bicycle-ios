@@ -8,9 +8,10 @@
 
 #import "BCLStation.h"
 
+#import "Mantle+Reusability.h"
 #import <Mantle/Mantle.h>
 
-@interface BCLStation () <MTLJSONSerializing>
+@interface BCLStation () <MTLJSONSerializing, MTLUniquing>
 
 @property (nonatomic, copy, readwrite) NSString *stationId;
 @property (nonatomic, copy, readwrite) NSString *name;
@@ -23,6 +24,10 @@
 @end
 
 @implementation BCLStation
+
++ (NSString *)uniquiePropertyName {
+    return SQTypedKeyPath(BCLStation, stationId);
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
