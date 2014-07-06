@@ -4,6 +4,7 @@
 inhibit_all_warnings!
 target "Bicycle" do
     pod 'Objection', '~> 1.4'
+    pod 'ReactiveCocoa', '~> 2.3.1'
     pod 'Mantle', '~> 1.5'
     pod 'AFNetworking', '~> 2.3.1'
     pod 'Google-Maps-iOS-SDK', '~> 1.8.1'
