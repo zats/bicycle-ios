@@ -11,6 +11,26 @@
 #import "Mantle+Reusability.h"
 #import <Mantle/Mantle.h>
 
+NSArray *BCLLocationCoordinateToArray(CLLocationCoordinate2D coordinate) {
+    if (CLLocationCoordinate2DIsValid(coordinate)) {
+        return @[ @(coordinate.latitude), @(coordinate.longitude) ];
+    }
+    return nil;
+}
+
+CLLocationCoordinate2D BCLArrayToLocationCoordinate(NSArray *coordinates) {
+    if ([coordinates count] != 2) {
+        return kCLLocationCoordinate2DInvalid;
+    }
+    CLLocationCoordinate2D location = CLLocationCoordinate2DMake([coordinates[0] doubleValue],
+                                                                 [coordinates[1] doubleValue]);
+    if (!CLLocationCoordinate2DIsValid(location)) {
+        return kCLLocationCoordinate2DInvalid;
+    }
+    return location;
+}
+
+
 @interface BCLStation () <MTLJSONSerializing, MTLUniquing>
 
 @property (nonatomic, copy, readwrite) NSString *stationId;
@@ -43,23 +63,16 @@
 
 + (NSValueTransformer *)locationJSONTransformer {
     return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSArray *coordinates) {
-        if ([coordinates count] != 2) {
-            return nil;
-        }
-        CLLocationCoordinate2D location = CLLocationCoordinate2DMake([coordinates[0] doubleValue],
-                                                                     [coordinates[1] doubleValue]);
-        if (!CLLocationCoordinate2DIsValid(location)) {
-            return nil;
-        }
-        return [NSValue value:&location
-                 withObjCType:@encode(CLLocationCoordinate2D)];
-    } reverseBlock:^id(NSValue *locationValue) {
-        CLLocationCoordinate2D location = kCLLocationCoordinate2DInvalid;
-        [locationValue getValue:&location];
-        if (CLLocationCoordinate2DIsValid(location)) {
-            return @[ @(location.latitude), @(location.longitude) ];
+        CLLocationCoordinate2D coordinate = BCLArrayToLocationCoordinate(coordinates);
+        if (CLLocationCoordinate2DIsValid(coordinate)) {
+            return [NSValue value:&coordinate
+                     withObjCType:@encode(CLLocationCoordinate2D)];
         }
         return nil;
+    } reverseBlock:^id(NSValue *locationValue) {
+        CLLocationCoordinate2D coordinate = kCLLocationCoordinate2DInvalid;
+        [locationValue getValue:&coordinate];
+        return BCLLocationCoordinateToArray(coordinate);
     }];
 }
 

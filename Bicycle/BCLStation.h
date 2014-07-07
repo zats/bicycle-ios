@@ -10,6 +10,9 @@
 
 @import CoreLocation;
 
+extern NSArray *BCLLocationCoordinateToArray(CLLocationCoordinate2D coordinate);
+extern CLLocationCoordinate2D BCLArrayToLocationCoordinate(NSArray *array);
+
 @interface BCLStation : BCLModel
 
 @property (nonatomic, copy, readonly) NSString *stationId;

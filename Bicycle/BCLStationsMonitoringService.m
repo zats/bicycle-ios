@@ -14,7 +14,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "BCLStationAPIResponse.h"
 
-static const NSTimeInterval BCLStationMoitoringInterval = 20;//1.5 * 60;
+static const NSTimeInterval BCLStationMoitoringInterval = 60;
 
 static inline BOOL BCLReachabiltyStatusToBoolean(AFNetworkReachabilityStatus status) {
     return status == AFNetworkReachabilityStatusReachableViaWWAN || status == AFNetworkReachabilityStatusReachableViaWiFi;
