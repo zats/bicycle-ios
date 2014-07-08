@@ -28,5 +28,7 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>To display stations closest to you</string>
 </dict>
 </plist>

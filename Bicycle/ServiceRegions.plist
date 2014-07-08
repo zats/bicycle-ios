@@ -7,13 +7,8 @@
 		<dict>
 			<key>Name</key>
 			<string>Tel Aviv</string>
-			<key>Zoom</key>
-			<string>11.928</string>
-			<key>Location</key>
-			<array>
-				<string>32.091</string>
-				<string>34.802</string>
-			</array>
+			<key>Coordinate region</key>
+			<string>{{32.075884267929773,34.781803439925113},{0.089035039592779697,0.06135781479082425}}</string>
 		</dict>
 	</array>
 </dict>

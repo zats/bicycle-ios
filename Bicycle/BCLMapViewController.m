@@ -8,24 +8,29 @@
 
 #import "BCLMapViewController.h"
 
+#import "BCLAnnotation.h"
 #import "BCLStation.h"
 #import "BCLStationsMonitoringService.h"
+#import "MKCoordinateRegion+String.h"
 
 #import <GoogleMaps/GoogleMaps.h>
 #import <Masonry/Masonry.h>
+#import <MapKit/MapKit.h>
 
-@interface BCLMapViewController () <GMSMapViewDelegate>
+@interface BCLMapViewController () <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
-@property (nonatomic, weak) IBOutlet GMSMapView *mapView;
+@property (nonatomic, weak) IBOutlet MKMapView *mapView;
 
 @property (nonatomic, strong) BCLStationsMonitoringService *stationsMonitoringService;
 @property (nonatomic, copy) NSArray *markers;
+
+@property (nonatomic, strong) CLLocationManager *locationManager;
 @end
 
 @implementation BCLMapViewController
 
-objection_requires_sel(@selector(stationsMonitoringService));
+objection_requires_sel(@selector(stationsMonitoringService), @selector(locationManager));
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,6 +39,8 @@ objection_requires_sel(@selector(stationsMonitoringService));
     
     [self _setupVisualEffects];
     [self _setMapDefaults];
+    
+    [self.locationManager requestWhenInUseAuthorization];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,9 +60,6 @@ objection_requires_sel(@selector(stationsMonitoringService));
 }
 
 - (void)_setMapDefaults {
-//    self.mapView.settings.compassButton = YES;
-    self.mapView.settings.myLocationButton = YES;
-    
     [self _setDefaultMapView];
     [self _subscribeForStationChanges];
 }
@@ -64,10 +68,9 @@ objection_requires_sel(@selector(stationsMonitoringService));
     NSURL *serviceRegionsFileURL = [[NSBundle mainBundle] URLForResource:@"ServiceRegions" withExtension:@"plist"];
     NSDictionary *serviceRegions = [NSDictionary dictionaryWithContentsOfURL:serviceRegionsFileURL];
     NSDictionary *telAviv = [serviceRegions[@"Cities"] firstObject];
-    CGFloat zoomLevel = [telAviv[@"Zoom"] floatValue];
-    NSArray *locationCoordinates = telAviv[@"Location"];
-    CLLocationCoordinate2D location = CLLocationCoordinate2DMake([locationCoordinates[0] doubleValue], [locationCoordinates[1] doubleValue]);
-    self.mapView.camera = [GMSCameraPosition cameraWithTarget:location zoom:zoomLevel];
+    NSString *regionString = telAviv[@"Coordinate region"];
+    MKCoordinateRegion region = BCLCoordinateRegionFromString(regionString);
+    self.mapView.region = region;
 }
 
 - (void)_subscribeForStationChanges {
@@ -76,11 +79,12 @@ objection_requires_sel(@selector(stationsMonitoringService));
     RAC(self, markers) = [[RACObserve(self.stationsMonitoringService, stations) skip:1] map:^id(NSArray *stations) {
         NSMutableArray *results = [NSMutableArray array];
         for (BCLStation *station in stations) {
-            GMSMarker *stationMarker = [GMSMarker markerWithPosition:station.location];
-            stationMarker.title = [NSString stringWithFormat:@"b %tu d %tu %@",station.availableBicycles, station.availableDocks, station.name];
-            stationMarker.snippet = station.address;
-            stationMarker.icon = [GMSMarker markerImageWithColor:[self _colorForStation:station]];
-            [results addObject:stationMarker];
+            BCLAnnotation *annotation = [[BCLAnnotation alloc] init];
+            annotation.title = [NSString stringWithFormat:@"b%tu d%tu %@",station.availableBicycles, station.availableDocks, station.name];
+            annotation.subtitle = station.address;
+            annotation.coordinate = station.location;
+            annotation.station = station;
+            [results addObject:annotation];
         }
         return results;
     }];
@@ -88,11 +92,9 @@ objection_requires_sel(@selector(stationsMonitoringService));
     @weakify(self);
     [[RACObserve(self, markers) skip:1] subscribeNext:^(NSArray *markers) {
         @strongify(self);
-        [self.mapView clear];
+        [self.mapView removeAnnotations:self.mapView.annotations];
         
-        for (GMSMarker *marker in markers) {
-            marker.map = self.mapView;
-        }
+        [self.mapView addAnnotations:markers];
     }];
 }
 
@@ -106,10 +108,26 @@ objection_requires_sel(@selector(stationsMonitoringService));
     return [UIColor colorWithRed:0.768 green:0.000 blue:0.031 alpha:1.000];
 }
 
-#pragma mark - GMSMapViewDelegate
+#pragma mark - MKMapViewDelegate
 
-- (void)mapView:(GMSMapView *)mapView idleAtCameraPosition:(GMSCameraPosition *)position {
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
 
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView
+            viewForAnnotation:(id<MKAnnotation>)annotation {
+    static NSString *const BCLStationAnnotationIdentifier = @"BCLStationAnnotationIdentifier";
+    MKPinAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:BCLStationAnnotationIdentifier];
+    if (!annotationView) {
+        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:BCLStationAnnotationIdentifier];
+        annotationView.canShowCallout = YES;
+    } else {
+        annotationView.annotation = annotation;
+    }
+//    if ([annotation isKindOfClass:[BCLAnnotation class]]) {
+//        annotationView.tintColor = [self _colorForStation:((BCLAnnotation *)annotation).station];
+//    }
+    return annotationView;
 }
 
 @end

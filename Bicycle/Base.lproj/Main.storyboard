@@ -16,18 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view appearanceType="aqua" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yWP-Pz-sgE" customClass="GMSMapView">
+                            <mapView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cqY-2Z-Gcc">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="lMX-Zk-oxn"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="pXD-s2-qrb"/>
                                 </connections>
-                            </view>
+                            </mapView>
                             <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search for address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gDn-Vi-uTx">
-                                <rect key="frame" x="20" y="20" width="440" height="30"/>
+                                <rect key="frame" x="20" y="20" width="440" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="x9N-yT-4zm"/>
+                                    <constraint firstAttribute="height" constant="44" id="x9N-yT-4zm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
@@ -35,15 +34,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="yWP-Pz-sgE" secondAttribute="trailing" id="DBw-MJ-Irk"/>
-                            <constraint firstItem="yWP-Pz-sgE" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Hm9-Bk-xyp"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cqY-2Z-Gcc" secondAttribute="bottom" id="D0t-sx-Ro2"/>
+                            <constraint firstItem="cqY-2Z-Gcc" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Xmt-CK-UMe"/>
+                            <constraint firstItem="cqY-2Z-Gcc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="eBF-0N-gW1"/>
                             <constraint firstAttribute="trailing" secondItem="gDn-Vi-uTx" secondAttribute="trailing" constant="20" id="hHe-Fw-Kvy"/>
                             <constraint firstItem="gDn-Vi-uTx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="hLB-iI-dsW"/>
                             <constraint firstItem="gDn-Vi-uTx" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="kO6-e1-P7P">
                                 <variation key="heightClass=compact-widthClass=compact" constant="10"/>
                             </constraint>
-                            <constraint firstItem="yWP-Pz-sgE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="vrL-a2-Ytd"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="yWP-Pz-sgE" secondAttribute="bottom" id="z4t-cy-9tb"/>
+                            <constraint firstAttribute="trailing" secondItem="cqY-2Z-Gcc" secondAttribute="trailing" id="tvy-Da-B5d"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -57,13 +56,13 @@
                         </textField>
                     </navigationItem>
                     <connections>
-                        <outlet property="mapView" destination="yWP-Pz-sgE" id="tyx-Hx-1dx"/>
+                        <outlet property="mapView" destination="cqY-2Z-Gcc" id="Ym0-Y8-CUt"/>
                         <outlet property="searchTextField" destination="gDn-Vi-uTx" id="SNO-Hm-c3W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1091" y="262"/>
+            <point key="canvasLocation" x="1057" y="156"/>
         </scene>
     </scenes>
 </document>

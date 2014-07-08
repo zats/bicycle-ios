@@ -17,6 +17,9 @@
 		5C438A4019695F3000B73CFE /* BCLModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C438A3F19695F3000B73CFE /* BCLModule.m */; };
 		5C438A4419695F8A00B73CFE /* Objection+BetterObjectiveC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C438A4319695F8A00B73CFE /* Objection+BetterObjectiveC.m */; };
 		5C438A461969702D00B73CFE /* ServiceRegions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C438A451969702D00B73CFE /* ServiceRegions.plist */; };
+		5C51AA20196B2E4B008AD112 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C51AA1F196B2E4B008AD112 /* MapKit.framework */; };
+		5C51AA24196B30ED008AD112 /* MKCoordinateRegion+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C51AA23196B30ED008AD112 /* MKCoordinateRegion+String.m */; };
+		5C51AA28196B33B7008AD112 /* BCLAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C51AA27196B33B7008AD112 /* BCLAnnotation.m */; };
 		5C6DE3E719686ABD007EB5FD /* GMSCameraPosition+BetterXcodeIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6DE3E619686ABD007EB5FD /* GMSCameraPosition+BetterXcodeIntegration.m */; };
 		5C6DE3EE19687602007EB5FD /* BCLAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6DE3ED19687602007EB5FD /* BCLAPIClient.m */; };
 		5C7546F9196981C200290D94 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7546F8196981C200290D94 /* Crashlytics.framework */; };
@@ -60,6 +63,11 @@
 		5C438A4219695F8A00B73CFE /* Objection+BetterObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Objection+BetterObjectiveC.h"; path = "Objection+BetterObjectiveC/Objection+BetterObjectiveC.h"; sourceTree = "<group>"; };
 		5C438A4319695F8A00B73CFE /* Objection+BetterObjectiveC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Objection+BetterObjectiveC.m"; path = "Objection+BetterObjectiveC/Objection+BetterObjectiveC.m"; sourceTree = "<group>"; };
 		5C438A451969702D00B73CFE /* ServiceRegions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ServiceRegions.plist; sourceTree = "<group>"; };
+		5C51AA1F196B2E4B008AD112 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5C51AA22196B30ED008AD112 /* MKCoordinateRegion+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKCoordinateRegion+String.h"; sourceTree = "<group>"; };
+		5C51AA23196B30ED008AD112 /* MKCoordinateRegion+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKCoordinateRegion+String.m"; sourceTree = "<group>"; };
+		5C51AA26196B33B7008AD112 /* BCLAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLAnnotation.h; sourceTree = "<group>"; };
+		5C51AA27196B33B7008AD112 /* BCLAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLAnnotation.m; sourceTree = "<group>"; };
 		5C6DE3E5196869DB007EB5FD /* GMSCameraPosition+BetterXcodeIntegration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GMSCameraPosition+BetterXcodeIntegration.h"; path = "GoogleMaps+BetterXcode/GMSCameraPosition+BetterXcodeIntegration.h"; sourceTree = "<group>"; };
 		5C6DE3E619686ABD007EB5FD /* GMSCameraPosition+BetterXcodeIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GMSCameraPosition+BetterXcodeIntegration.m"; path = "GoogleMaps+BetterXcode/GMSCameraPosition+BetterXcodeIntegration.m"; sourceTree = "<group>"; };
 		5C6DE3EC19687602007EB5FD /* BCLAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLAPIClient.h; sourceTree = "<group>"; };
@@ -95,6 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C7546F9196981C200290D94 /* Crashlytics.framework in Frameworks */,
+				5C51AA20196B2E4B008AD112 /* MapKit.framework in Frameworks */,
 				21CABC6633224969870786FC /* libPods-Bicycle.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +121,7 @@
 		562636F566F2481B84C8679C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5C51AA1F196B2E4B008AD112 /* MapKit.framework */,
 				5C7546F8196981C200290D94 /* Crashlytics.framework */,
 				91098A2162154254872C2712 /* libPods-Bicycle.a */,
 			);
@@ -156,6 +166,24 @@
 				5C438A4319695F8A00B73CFE /* Objection+BetterObjectiveC.m */,
 			);
 			name = "Objection+BetterObjectiveC";
+			sourceTree = "<group>";
+		};
+		5C51AA21196B30BB008AD112 /* MKCoordinateRegion+Strings */ = {
+			isa = PBXGroup;
+			children = (
+				5C51AA22196B30ED008AD112 /* MKCoordinateRegion+String.h */,
+				5C51AA23196B30ED008AD112 /* MKCoordinateRegion+String.m */,
+			);
+			name = "MKCoordinateRegion+Strings";
+			sourceTree = "<group>";
+		};
+		5C51AA25196B33AD008AD112 /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				5C51AA26196B33B7008AD112 /* BCLAnnotation.h */,
+				5C51AA27196B33B7008AD112 /* BCLAnnotation.m */,
+			);
+			name = Annotations;
 			sourceTree = "<group>";
 		};
 		5C6DE3EA19687547007EB5FD /* Services */ = {
@@ -290,6 +318,7 @@
 		5C9AEE391968666400A5B257 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				5C51AA25196B33AD008AD112 /* Annotations */,
 				5C7546FE196990B800290D94 /* Data Provides */,
 				5C9AEE351968616400A5B257 /* BCLMapViewController.h */,
 				5C9AEE361968616400A5B257 /* BCLMapViewController.m */,
@@ -320,6 +349,7 @@
 		5C9AEE3C1968668500A5B257 /* Utlities */ = {
 			isa = PBXGroup;
 			children = (
+				5C51AA21196B30BB008AD112 /* MKCoordinateRegion+Strings */,
 				5C7546FA1969822800290D94 /* Mantle+Reusability */,
 				5C438A4119695F6000B73CFE /* Objection+BetterObjectiveC */,
 				5C9AEE3F196867C700A5B257 /* GoogleMaps+BetterXcodeIntegration */,
@@ -392,6 +422,11 @@
 				TargetAttributes = {
 					5C77756E19685B5A00B0D1CA = {
 						CreatedOnToolsVersion = 6.0;
+						SystemCapabilities = {
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					5C77758419685B5B00B0D1CA = {
 						CreatedOnToolsVersion = 6.0;
@@ -490,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C51AA28196B33B7008AD112 /* BCLAnnotation.m in Sources */,
 				5C7546FD1969825200290D94 /* Mantle+Reusability.m in Sources */,
 				5C438A38196920EA00B73CFE /* BCLAPIResponse.m in Sources */,
 				5C77757819685B5B00B0D1CA /* BCLAppDelegate.m in Sources */,
@@ -502,6 +538,7 @@
 				5C438A3319691B6800B73CFE /* BCLModel.m in Sources */,
 				5C438A4419695F8A00B73CFE /* Objection+BetterObjectiveC.m in Sources */,
 				5C438A30196886C600B73CFE /* BCLStation.m in Sources */,
+				5C51AA24196B30ED008AD112 /* MKCoordinateRegion+String.m in Sources */,
 				5C438A2819687DF300B73CFE /* BCLAPIResponseSerializer.m in Sources */,
 				5C438A2C1968849300B73CFE /* BCLStationAPIResponse.m in Sources */,
 				5C9AEE371968616400A5B257 /* BCLMapViewController.m in Sources */,

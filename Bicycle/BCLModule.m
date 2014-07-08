@@ -11,6 +11,7 @@
 #import "BCLAPIClient.h"
 #import "BCLAPIResponseSerializer.h"
 #import "BCLStationsMonitoringService.h"
+#import <CoreLocation/CLLocationManager.h>
 
 @implementation BCLModule
 
@@ -27,6 +28,8 @@
     
     [self bindClass:[BCLAPIResponseSerializer class]
          toProtocol:@protocol(BCLAPIResponseSerializerProtocol)];
+    
+    [self bindClass:[CLLocationManager class] inScope:JSObjectionScopeSingleton];
 }
 
 @end
